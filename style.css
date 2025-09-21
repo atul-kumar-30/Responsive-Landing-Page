@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Base Styles */
+body {
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+/* Header and Navigation */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: background-color 0.4s ease-in-out;
+    z-index: 1000;
+}
+
+#navbar nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    transition: color 0.4s ease-in-out;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.4s ease-in-out;
+}
+
+/* Nav Bar States (Managed by JavaScript) */
+.scrolled-nav {
+    background-color: #333;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.scrolled-nav .logo, .scrolled-nav .nav-links a {
+    color: #fff;
+}
+
+/* Hover Effect */
+.nav-links a:hover {
+    color: #ffd700 !important; /* Yellow hover effect */
+}
+
+/* Main Sections */
+.page-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.page-section:nth-of-type(1) { background-color: #1abc9c; }
+.page-section:nth-of-type(2) { background-color: #3498db; }
+.page-section:nth-of-type(3) { background-color: #9b59b6; }
+.page-section.filler-content { background-color: #e74c3c; }
+.page-section:last-of-type { background-color: #34495e; }
+
+.content-wrapper {
+    padding: 20px;
+    max-width: 800px;
+}
+
+.content-wrapper h1, h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.content-wrapper p {
+    font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #navbar nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+    }
+
+    .nav-links li {
+        margin: 0 10px;
+    }
+}
